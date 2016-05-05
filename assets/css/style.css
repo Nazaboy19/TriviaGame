@@ -59,6 +59,14 @@ ul {
     margin: 0;
 }
 
+#spon{
+    
+    text-align:center;
+    color:#00FF7F;
+
+
+}
+
 #prev {
     display:none;
 }
@@ -68,9 +76,17 @@ ul {
     width: 90px;
 }
 
-#footer .copyright {
-float: right;
-padding: 30px 0;
-width: 425px;
-text-align: center;
+
+
+.onclick{
+    border:4px solid;
+    border-radius:5px;
+    width: 40px;
+    padding-left:5px;
+    padding-right: 5px;
+    position: relative;
+    float:right;
+    background-color: #DC143C;
+    color: black;
+    margin: 0 2px 0 2px;
 }

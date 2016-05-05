@@ -18,7 +18,9 @@
 	<body>
 		<div id='container'>
 			<div id='title'>
-				<h1>The Best Trivia Game Ever (JK)</h1>
+				<h1>The Best Trivia Game Ever (JK)
+				</h1>
+				<h3 id='spon'>Sponsored by Naza.Corp</h3>
 			</div>
    			<br/>
   			<div id='trivia'></div>
@@ -28,10 +30,7 @@
     		
     	</div>
 
-    <div id="footer">
-			<div class="copyright">
-    		Copyright &copy; 2016 IAMA. All rights reserved.
-		</div>
+    
 
 
 	
@@ -45,6 +44,18 @@
   	vid.loop = true;
   	vid.load();
 } 
+
+
+
+</script>
+<button onclick="clearInterval(myVar)"></button>
+
+<script>
+var myVar = setInterval(myTimer ,900000);
+function myTimer() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
 </script>
 
 
