@@ -2,28 +2,28 @@
   var questions = [{
     question: "Who is the best character in the marvel universe?",
     choices: ["Deadpool","Spiderman","Captain America","Iron Man"],
-    correctAnswer: "Deadpool"
+    correctAnswer: "Deadpool",
   }, {
-    question: "What is 3*6?",
-    choices: [3, 6, 9, 12, 18],
-    correctAnswer: 4
+    question: "In what year did the moon landing happened?",
+    choices: ["1968", "1970", "1969", "2000"],
+    correctAnswer: "1969",
   }, {
-    question: "What is 8*9?",
-    choices: [72, 99, 108, 134, 156],
-    correctAnswer: 0
+    question: "Superman is a fictional superhero from what fictional planet?",
+    choices: ["Mars", "Earth", " Krypton", "pluto"],
+    correctAnswer: "Krypton",
   }, {
-    question: "What is 1*7?",
-    choices: [4, 5, 6, 7, 8],
-    correctAnswer: 3
+    question: " Guinness beer was first brewed in which country?",
+    choices: ["France", "Ireland", "U.S.A", "Spain"],
+    correctAnswer: "Ireland",
   }, {
-    question: "What is 8*8?",
-    choices: [20, 30, 40, 50, 64],
-    correctAnswer: 4
+    question: "Which team won the 2016 Super Bowl?",
+    choices: ["Seattle Seahawks", "Denver Broncos",  " Tampa Bay Buccaneers", "Carolina Panthers"],
+    correctAnswer: "Denver Broncos",
   }];
   
   var questionCounter = 0; 
   var selections = []; 
-  var quiz = $('#quiz'); 
+  var trivia = $('#trivia'); 
   
   
   displayNext();
@@ -33,7 +33,7 @@
     e.preventDefault();
     
  
-    if(quiz.is(':animated')) {        
+    if(trivia.is(':animated')) {        
       return false;
     }
     choose();
@@ -51,7 +51,7 @@
   $('#prev').on('click', function (e) {
     e.preventDefault();
     
-    if(quiz.is(':animated')) {
+    if(trivia.is(':animated')) {
       return false;
     }
     choose();
@@ -63,7 +63,7 @@
   $('#start').on('click', function (e) {
     e.preventDefault();
     
-    if(quiz.is(':animated')) {
+    if(trivia.is(':animated')) {
       return false;
     }
     questionCounter = 0;
@@ -120,12 +120,12 @@
   
 
   function displayNext() {
-    quiz.fadeOut(function() {
+    trivia.fadeOut(function() {
       $('#question').remove();
       
       if(questionCounter < questions.length){
         var nextQuestion = createQuestionElement(questionCounter);
-        quiz.append(nextQuestion).fadeIn();
+        trivia.append(nextQuestion).fadeIn();
         if (!(isNaN(selections[questionCounter]))) {
           $('input[value='+selections[questionCounter]+']').prop('checked', true);
         }
@@ -140,7 +140,7 @@
         }
       }else {
         var scoreElem = displayScore();
-        quiz.append(scoreElem).fadeIn();
+        trivia.append(scoreElem).fadeIn();
         $('#next').hide();
         $('#prev').hide();
         $('#start').show();

@@ -21,14 +21,14 @@ h1 {
     padding-right: 5px;
     position: relative;
     float:right;
-    background-color: #DCDCDC;
+    background-color: #DC143C;
     color: black;
     margin: 0 2px 0 2px;
 }
 
 .button.active {
-    background-color: #F8F8FF;
-    color: #525252;
+    background-color: #2E8B57;
+    color: #2E8B57;
 }
 
 button {
@@ -45,7 +45,7 @@ button {
     width:50%;
     margin:auto;
     padding: 0 25px 40px 10px;
-    background-color: #1E90FF;
+    background-color: #FF4500;
     border:4px solid #B0E0E6;
     border-radius:5px;
     color: #FFFFFF;
