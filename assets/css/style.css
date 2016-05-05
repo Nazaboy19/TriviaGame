@@ -6,9 +6,7 @@ h1 {
     text-align: center;
 }
 
-#title {
-    text-decoration: underline;
-}
+
 
 #quiz {
     text-indent: 10px;
@@ -69,6 +67,10 @@ ul {
     display:none;
     width: 90px;
 }
-footer{
-    float:center;
+
+#footer .copyright {
+float: right;
+padding: 30px 0;
+width: 425px;
+text-align: center;
 }
